@@ -528,7 +528,12 @@ ScrollTrigger.create({
         {/* Bottom Triangle Shape */}
         <div 
           ref={triangleRef}
-          className="absolute bottom-4 left-[49%] transform -translate-x-1/2 opacity-0 animate-fade-in-delayed z-30"
+          className="absolute bottom-4 left-[49%] transform -translate-x-1/2 opacity-0 animate-fade-in-delayed z-30 cursor-pointer"
+          onClick={() => {
+            document.getElementById('contact-section')?.scrollIntoView({ 
+              behavior: 'smooth' 
+            });
+          }}
           style={{ 
             animationDelay: '3.5s', 
             animationFillMode: 'forwards',
@@ -539,6 +544,9 @@ ScrollTrigger.create({
             <div 
               className="w-0 h-0 border-l-[12px] border-r-[12px] border-t-[20px] border-l-transparent border-r-transparent border-t-cyan-400 animate-bounce-triangle"
             />
+            <p className="text-white/60 text-xs font-bosenAlt mt-2 uppercase tracking-wide">
+              Scroll Down
+            </p>
           </div>
         </div>
       </div>
@@ -610,123 +618,9 @@ ScrollTrigger.create({
         </div>
       </div>
 
-      {/* Contact Section */}
-      <div className="relative min-h-screen w-full z-10">
-        {/* Random Lines for Contact Section */}
-        <RandomLines count={20} className="z-10 opacity-30" />
-        
-        {/* Fixed Background for Contact Section */}
-        <div 
-          className="fixed inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('/public/bg.png')`,
-            backgroundAttachment: 'fixed',
-            zIndex: -1
-          }}
-        />
-  
-        {/* Contact Content */}
-        <div className="relative bg-transparent z-20">
-          <div className="container mx-auto px-6 py-20">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-7xl lg:text-8xl font-bosenAlt text-white/90 mb-6 tracking-tight drop-shadow">
-                CONTACT
-              </h2>
-              <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-                Let's create something extraordinary together
-              </p>
-            </div>
-            
-            {/* Contact Form */}
-            <div className="max-w-2xl mx-auto">
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-white/80 font-bosenAlt text-sm uppercase tracking-wide mb-2">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 backdrop-blur-sm focus:outline-none focus:border-white/40 focus:bg-white/15 transition-all duration-300"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-white/80 font-bosenAlt text-sm uppercase tracking-wide mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 backdrop-blur-sm focus:outline-none focus:border-white/40 focus:bg-white/15 transition-all duration-300"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label htmlFor="subject" className="block text-white/80 font-bosenAlt text-sm uppercase tracking-wide mb-2">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 backdrop-blur-sm focus:outline-none focus:border-white/40 focus:bg-white/15 transition-all duration-300"
-                    placeholder="Project inquiry"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-white/80 font-bosenAlt text-sm uppercase tracking-wide mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 backdrop-blur-sm focus:outline-none focus:border-white/40 focus:bg-white/15 transition-all duration-300 resize-none"
-                    placeholder="Tell me about your project..."
-                  ></textarea>
-                </div>
-                
-                <div className="text-center">
-                  <button
-                    type="submit"
-                    className="inline-flex items-center px-8 py-4 bg-white/20 hover:bg-white/30 border border-white/30 hover:border-white/50 rounded-lg text-white font-bosenAlt text-sm uppercase tracking-wide backdrop-blur-sm transition-all duration-300 hover:scale-105"
-                  >
-                    Send Message
-                  </button>
-                </div>
-              </form>
-              
-              {/* Contact Info */}
-              <div className="mt-16 text-center">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  <div>
-                    <h4 className="font-bosenAlt text-white/80 text-sm uppercase tracking-wide mb-2">Email</h4>
-                    <p className="text-white/60">hello@aamirnaqvi.com</p>
-                  </div>
-                  <div>
-                    <h4 className="font-bosenAlt text-white/80 text-sm uppercase tracking-wide mb-2">Phone</h4>
-                    <p className="text-white/60">+1 (555) 123-4567</p>
-                  </div>
-                  <div>
-                    <h4 className="font-bosenAlt text-white/80 text-sm uppercase tracking-wide mb-2">Location</h4>
-                    <p className="text-white/60">New York, NY</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      {/* New Contact Section */}
-      <div className="relative min-h-screen w-full bg-black z-10 overflow-hidden">
+      {/* Contact Section */}
+      <div id="contact-section" className="relative min-h-screen w-full bg-black z-10 overflow-hidden">
         {/* Animated Background Grid */}
         <div className="absolute inset-0 opacity-10">
           <div 
