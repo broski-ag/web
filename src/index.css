@@ -105,6 +105,36 @@ body {
   background: rgba(251, 191, 36, 0.3);
   color: white;
 }
+
+/* Floating animation for random lines */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(180deg);
+  }
+  75% {
+    transform: translateY(10px) rotate(270deg);
+  }
+}
+
+/* Texture overlay */
+.texture-overlay {
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(0,0,0,0.15) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+.texture-overlay-light {
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(0,0,0,0.08) 1px, transparent 0);
+  background-size: 15px 15px;
+}
+
 .fixed-portrait {
   position: fixed !important;
   top: 50px; /* ya jo tumhe thik lage */

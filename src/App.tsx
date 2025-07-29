@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { Star, Maximize2, X } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { SplashScreen } from './components/SplashScreen';
+import { RandomLines } from './components/RandomLines';
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -233,6 +235,7 @@ function TestimonialBadge({ badge }: { badge: TestimonialBadge }) {
 }
 
 function App() {
+  const [isLoading, setIsLoading] = React.useState(true);
   const heroRef = useRef<HTMLDivElement>(null);
   const portraitRef = useRef<HTMLDivElement>(null);
   const eyesRef = useRef<HTMLDivElement>(null);
@@ -245,6 +248,11 @@ function App() {
 
   // Mouse tracking state
   const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
+
+  // Handle splash screen completion
+  const handleLoadComplete = () => {
+    setIsLoading(false);
+  };
 
   // Mouse tracking effect
   useEffect(() => {
@@ -361,6 +369,9 @@ ScrollTrigger.create({
 
   return (
     <div className="relative">
+      {/* Splash Screen */}
+      {isLoading && <SplashScreen onLoadComplete={handleLoadComplete} />}
+
       {/* Fixed Background */}
       <div 
         ref={fixedBackgroundRef}
@@ -535,9 +546,16 @@ ScrollTrigger.create({
       {/* Portfolio Section */}
       <div 
          ref={portfolioSectionRef} 
-        className="relative min-h-screen w-full bg-white z-40 rounded-t-[3rem]">
+        className="relative min-h-screen w-full bg-white z-40 rounded-t-[3rem] texture-overlay">
+        
+        {/* Random Lines Overlay */}
+        <RandomLines count={25} className="z-10" />
+        
+        {/* Additional texture layer */}
+        <div className="absolute inset-0 texture-overlay-light opacity-30 z-10" />
+        
         <div className="container mx-auto px-6 py-20">
-          <div className="text-center mb-16">
+          <div className="relative text-center mb-16 z-20">
             <h2 className="text-5xl md:text-7xl lg:text-8xl font-bosenAlt text-black/90 mb-6 tracking-tight">
               PORTFOLIO
             </h2>
@@ -547,7 +565,7 @@ ScrollTrigger.create({
           </div>
           
           {/* Show Reel Section */}
-          <div className="mb-20">
+          <div className="relative mb-20 z-20">
             <h3 className="text-3xl md:text-4xl font-bosenAlt text-black/80 mb-8 text-center tracking-tight">
               SHOW REEL
             </h3>
@@ -561,7 +579,7 @@ ScrollTrigger.create({
           </div>
 
           {/* 3x3 Grid of 16:9 Videos */}
-          <div className="mb-20">
+          <div className="relative mb-20 z-20">
             <h3 className="text-3xl md:text-4xl font-bosenAlt text-black/80 mb-8 text-center tracking-tight">
               FEATURED WORK
             </h3>
@@ -576,7 +594,7 @@ ScrollTrigger.create({
           </div>
 
           {/* 6x4 Grid of 9:16 Videos */}
-          <div className="mb-20">
+          <div className="relative mb-20 z-20">
             <h3 className="text-3xl md:text-4xl font-bosenAlt text-black/80 mb-8 text-center tracking-tight">
               SOCIAL CONTENT
             </h3>
@@ -594,6 +612,9 @@ ScrollTrigger.create({
 
       {/* Contact Section */}
       <div className="relative min-h-screen w-full z-10">
+        {/* Random Lines for Contact Section */}
+        <RandomLines count={20} className="z-10 opacity-30" />
+        
         {/* Fixed Background for Contact Section */}
         <div 
           className="fixed inset-0 bg-cover bg-center"
@@ -605,7 +626,7 @@ ScrollTrigger.create({
         />
   
         {/* Contact Content */}
-        <div className="relative bg-transparent">
+        <div className="relative bg-transparent z-20">
           <div className="container mx-auto px-6 py-20">
             <div className="text-center mb-16">
               <h2 className="text-5xl md:text-7xl lg:text-8xl font-bosenAlt text-white/90 mb-6 tracking-tight drop-shadow">
