@@ -724,6 +724,227 @@ ScrollTrigger.create({
           </div>
         </div>
       </div>
+
+      {/* New Contact Section */}
+      <div className="relative min-h-screen w-full bg-black z-10 overflow-hidden">
+        {/* Animated Background Grid */}
+        <div className="absolute inset-0 opacity-10">
+          <div 
+            className="w-full h-full"
+            style={{
+              backgroundImage: `
+                linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+              `,
+              backgroundSize: '50px 50px',
+              animation: 'gridMove 20s linear infinite'
+            }}
+          />
+        </div>
+
+        {/* Random Lines for Contact Section */}
+        <RandomLines count={30} className="z-10 opacity-20" />
+        
+        {/* Floating Geometric Shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          {Array.from({ length: 8 }, (_, i) => (
+            <div
+              key={i}
+              className="absolute border border-white/10 rounded-full"
+              style={{
+                width: `${Math.random() * 200 + 100}px`,
+                height: `${Math.random() * 200 + 100}px`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animation: `float ${Math.random() * 15 + 10}s infinite ease-in-out`,
+                animationDelay: `${Math.random() * 5}s`
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Main Content */}
+        <div className="relative z-20 min-h-screen flex items-center">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              
+              {/* Left Side - Contact Info */}
+              <div className="space-y-12">
+                <div>
+                  <h2 className="text-6xl md:text-8xl lg:text-9xl font-bosenAlt text-white mb-6 tracking-tight leading-none">
+                    LET'S
+                  </h2>
+                  <h2 className="text-6xl md:text-8xl lg:text-9xl font-bosenAlt text-white/60 mb-8 tracking-tight leading-none">
+                    TALK
+                  </h2>
+                  <p className="text-xl text-white/70 leading-relaxed max-w-lg">
+                    Ready to bring your vision to life? Let's collaborate and create something extraordinary that resonates with your audience.
+                  </p>
+                </div>
+
+                {/* Contact Methods */}
+                <div className="space-y-8">
+                  <div className="group cursor-pointer">
+                    <div className="flex items-center space-x-4 p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-white/20">
+                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-all duration-300">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-white/50 text-sm font-bosenAlt uppercase tracking-wide">Email</p>
+                        <p className="text-white text-lg">hello@aamirnaqvi.com</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="group cursor-pointer">
+                    <div className="flex items-center space-x-4 p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-white/20">
+                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-all duration-300">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-white/50 text-sm font-bosenAlt uppercase tracking-wide">Phone</p>
+                        <p className="text-white text-lg">+1 (555) 123-4567</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="group cursor-pointer">
+                    <div className="flex items-center space-x-4 p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-white/20">
+                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-all duration-300">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-white/50 text-sm font-bosenAlt uppercase tracking-wide">Location</p>
+                        <p className="text-white text-lg">New York, NY</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Social Links */}
+                <div className="flex space-x-6">
+                  {['Instagram', 'LinkedIn', 'Behance', 'Vimeo'].map((social) => (
+                    <a
+                      key={social}
+                      href="#"
+                      className="text-white/50 hover:text-white font-bosenAlt text-sm uppercase tracking-wide transition-all duration-300 hover:scale-110"
+                    >
+                      {social}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right Side - Contact Form */}
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                <h3 className="text-3xl font-bosenAlt text-white mb-8 tracking-tight">
+                  START A PROJECT
+                </h3>
+                
+                <form className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label className="text-white/70 font-bosenAlt text-xs uppercase tracking-wide">
+                        Name *
+                      </label>
+                      <input
+                        type="text"
+                        className="w-full px-0 py-3 bg-transparent border-0 border-b border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-white/60 transition-all duration-300"
+                        placeholder="Your full name"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-white/70 font-bosenAlt text-xs uppercase tracking-wide">
+                        Email *
+                      </label>
+                      <input
+                        type="email"
+                        className="w-full px-0 py-3 bg-transparent border-0 border-b border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-white/60 transition-all duration-300"
+                        placeholder="your@email.com"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-white/70 font-bosenAlt text-xs uppercase tracking-wide">
+                      Project Type
+                    </label>
+                    <select className="w-full px-0 py-3 bg-transparent border-0 border-b border-white/20 text-white focus:outline-none focus:border-white/60 transition-all duration-300">
+                      <option value="" className="bg-black">Select project type</option>
+                      <option value="brand-video" className="bg-black">Brand Video</option>
+                      <option value="commercial" className="bg-black">Commercial</option>
+                      <option value="social-content" className="bg-black">Social Content</option>
+                      <option value="documentary" className="bg-black">Documentary</option>
+                      <option value="other" className="bg-black">Other</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-white/70 font-bosenAlt text-xs uppercase tracking-wide">
+                      Budget Range
+                    </label>
+                    <select className="w-full px-0 py-3 bg-transparent border-0 border-b border-white/20 text-white focus:outline-none focus:border-white/60 transition-all duration-300">
+                      <option value="" className="bg-black">Select budget range</option>
+                      <option value="5k-10k" className="bg-black">$5K - $10K</option>
+                      <option value="10k-25k" className="bg-black">$10K - $25K</option>
+                      <option value="25k-50k" className="bg-black">$25K - $50K</option>
+                      <option value="50k+" className="bg-black">$50K+</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-white/70 font-bosenAlt text-xs uppercase tracking-wide">
+                      Project Details *
+                    </label>
+                    <textarea
+                      rows={4}
+                      className="w-full px-0 py-3 bg-transparent border-0 border-b border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-white/60 transition-all duration-300 resize-none"
+                      placeholder="Tell me about your vision, goals, and timeline..."
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full mt-8 py-4 bg-white text-black font-bosenAlt text-sm uppercase tracking-wide hover:bg-white/90 transition-all duration-300 hover:scale-105 rounded-lg"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            {/* Bottom Section */}
+            <div className="mt-20 pt-12 border-t border-white/10 text-center">
+              <p className="text-white/50 font-bosenAlt text-sm uppercase tracking-wide mb-4">
+                Response Time: Within 24 Hours
+              </p>
+              <div className="flex justify-center items-center space-x-8">
+                <div className="text-center">
+                  <p className="text-2xl font-bosenAlt text-white">100+</p>
+                  <p className="text-white/50 text-xs uppercase tracking-wide">Projects</p>
+                </div>
+                <div className="w-px h-8 bg-white/20"></div>
+                <div className="text-center">
+                  <p className="text-2xl font-bosenAlt text-white">50+</p>
+                  <p className="text-white/50 text-xs uppercase tracking-wide">Clients</p>
+                </div>
+                <div className="w-px h-8 bg-white/20"></div>
+                <div className="text-center">
+                  <p className="text-2xl font-bosenAlt text-white">5+</p>
+                  <p className="text-white/50 text-xs uppercase tracking-wide">Years</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
