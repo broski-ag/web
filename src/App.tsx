@@ -250,7 +250,7 @@ function App() {
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       const x = (e.clientX / window.innerWidth - 0.2) * 0.4; // -1 to 1
-      const y = (e.clientY / window.innerHeight - 0.2) * -0.4; // -1 to 1
+      const y = (e.clientY / window.innerHeight - 0.2) * 0.4; // -1 to 1
       setMousePosition({ x, y });
     };
 
