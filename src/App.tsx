@@ -245,6 +245,7 @@ function App() {
   const triangleRef = useRef<HTMLDivElement>(null);
   const fixedBackgroundRef = useRef<HTMLDivElement>(null);
   const portfolioRef = useRef();
+    const clientsRef = useRef();
 
   // Mouse tracking state
   const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
