@@ -629,20 +629,7 @@ ScrollTrigger.create({
 
 
       {/* Contact Section */}
-      <div id="contact-section" className="relative h-screen w-full bg-black z-10 overflow-hidden flex items-center justify-center">
-        {/* Subtle Background Texture */}
-        <div className="absolute inset-0 opacity-[72]">
-          <div 
-            className="w-full h-full" 
-            style={{
-              backgroundImage: `
-                linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
-              `,
-              backgroundSize: '80px 80px'
-            }}
-          />
-        </div>
+      
         
         {/* Main Content */}
         <div className="relative z-20 text-center max-w-4xl mx-auto px-6">
