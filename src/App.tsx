@@ -538,7 +538,7 @@ ScrollTrigger.create({
         {/* Bottom Triangle Shape */}
         <div 
           ref={triangleRef}
-          className="absolute bottom-4 left-[50%] transform -translate-x-1/2 opacity-0 animate-fade-in-delayed z-30 cursor-pointer"
+          className="absolute bottom-4 left-[45%] transform -translate-x-1/2 opacity-0 animate-fade-in-delayed z-30 cursor-pointer"
           onClick={() => {
             document.getElementById('contact-section')?.scrollIntoView({ 
               behavior: 'smooth' 
