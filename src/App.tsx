@@ -236,6 +236,7 @@ function TestimonialBadge({ badge }: { badge: TestimonialBadge }) {
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
+  const [showTestimonials, setShowTestimonials] = React.useState(true);
   const heroRef = useRef<HTMLDivElement>(null);
   const portraitRef = useRef<HTMLDivElement>(null);
   const eyesRef = useRef<HTMLDivElement>(null);
@@ -245,7 +246,6 @@ function App() {
   const triangleRef = useRef<HTMLDivElement>(null);
   const fixedBackgroundRef = useRef<HTMLDivElement>(null);
   const portfolioRef = useRef();
-    const clientsRef = useRef();
 
   // Mouse tracking state
   const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
