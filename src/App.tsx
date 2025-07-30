@@ -527,7 +527,7 @@ ScrollTrigger.create({
 
         {/* Floating Testimonial Badges */}
          <div
-         ref={clientsRef}
+          {showTestimonials &&
         className="fixed inset-0 z-20 pointer-events-none">
           {testimonialBadges.map((badge, index) => (
             <TestimonialBadge key={index} badge={badge} />
