@@ -622,7 +622,7 @@ ScrollTrigger.create({
       {/* Contact Section */}
       <div id="contact-section" className="relative h-screen w-full bg-black z-10 overflow-hidden flex items-center justify-center">
         {/* Subtle Background Texture */}
-        <div className="absolute inset-0 opacity-[0.02]">
+        <div className="absolute inset-0 opacity-[72]">
           <div 
             className="w-full h-full"
             style={{
