@@ -432,7 +432,7 @@ ScrollTrigger.create({
          {/* eyes */}
 <div 
   ref={eyesRef}
-  className="absolute inset-0 flex items-center justify-center z-25" 
+  className="absolute inset-0 flex items-center justify-center z-28" 
   style={{ top: '20%', left: '1%',
           transform: `translate(${mousePosition.x * 8}px, ${mousePosition.y * 8}px)`,
          }}
