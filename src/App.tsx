@@ -629,7 +629,8 @@ ScrollTrigger.create({
 
 
       {/* Contact Section */}
-      <div id="contact-section" className="relative h-screen w-full bg-black z-0 overflow-hidden flex items-center justify-center"> 
+     <div id="contact-section" className="relative h-screen w-full z-0 overflow-hidden flex items-center justify-center">
+
         
         {/* Main Content */}
         <div className="relative z-20 text-center max-w-4xl mx-auto px-6">
