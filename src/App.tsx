@@ -691,5 +691,7 @@ ScrollTrigger.create({
   </div>
 </div>
 
+  );
+}
 
 export default App;
