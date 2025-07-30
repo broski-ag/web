@@ -758,6 +758,7 @@ ScrollTrigger.create({
     <span className="text-white/15 font-bosenAlt text-sm tracking-widest">NOMINATE</span>
   </div>
 </div>
+      </div>
 
   );
 }
