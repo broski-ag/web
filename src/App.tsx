@@ -259,8 +259,8 @@ function App() {
   // Mouse tracking effect
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      const x = (e.clientX / window.innerWidth - 0.2) * 0.9; // -1 to 1
-      const y = (e.clientY / window.innerHeight - 0.2) * 0.9; // -1 to 1
+      const x = (e.clientX / window.innerWidth - 0.2) * 2; // -1 to 1
+      const y = (e.clientY / window.innerHeight - 0.2) * 0.7; // -1 to 1
       setMousePosition({ x, y });
     };
 
