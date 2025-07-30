@@ -360,6 +360,12 @@ ScrollTrigger.create({
       scrub: 1
     }
   });
+    ScrollTrigger.create({
+      trigger: portfolioSectionRef.current,
+      start: "bottom bottom",
+      onEnter: () => setShowTestimonials(false),
+      onLeaveBack: () => setShowTestimonials(true),
+    });
 
   return () => {
     ScrollTrigger.getAll().forEach(trigger => trigger.kill());
