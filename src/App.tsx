@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplashScreen } from './components/SplashScreen';
 import { RandomLines } from './components/RandomLines';
+import { Mail, Instagram, Linkedin } from 'lucide-react';
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
