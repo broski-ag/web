@@ -363,8 +363,8 @@ ScrollTrigger.create({
     ScrollTrigger.create({
       trigger: portfolioSectionRef.current,
       start: "bottom bottom",
-      onEnter: () => setShowclientsRef(false),
-      onLeaveBack: () => setShowclientsRef(true),
+      onEnter: () => clientsRef(false),
+      onLeaveBack: () => clientsRef(true),
     });
 
   return () => {
