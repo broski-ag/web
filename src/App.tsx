@@ -363,8 +363,8 @@ ScrollTrigger.create({
     ScrollTrigger.create({
       trigger: portfolioSectionRef.current,
       start: "bottom bottom",
-      onEnter: () => setShowTestimonials(false),
-      onLeaveBack: () => setShowTestimonials(true),
+      onEnter: () => setShowclientsRef(false),
+      onLeaveBack: () => setShowclientsRef(true),
     });
 
   return () => {
@@ -525,7 +525,9 @@ ScrollTrigger.create({
         </div>
 
         {/* Floating Testimonial Badges */}
-        <div className="fixed inset-0 z-20 pointer-events-none">
+         <div
+         ref={clientsRef}
+        className="fixed inset-0 z-20 pointer-events-none">
           {testimonialBadges.map((badge, index) => (
             <TestimonialBadge key={index} badge={badge} />
           ))}
