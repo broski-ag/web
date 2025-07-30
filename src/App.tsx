@@ -526,10 +526,14 @@ ScrollTrigger.create({
         </div>
 
         {/* Floating Testimonial Badges */}
-                 <div className="fixed inset-0 z-20 pointer-events-none">
-          {testimonialBadges.map((badge, index) => (
-            <TestimonialBadge key={index} badge={badge} />
-          ))}
+                {showTestimonials && (
+  <div className="fixed inset-0 z-20 pointer-events-none">
+    {testimonialBadges.map((badge, index) => (
+      <TestimonialBadge key={index} badge={badge} />
+    ))}
+  </div>
+)}
+
         </div>
 
         {/* Bottom Triangle Shape */}
